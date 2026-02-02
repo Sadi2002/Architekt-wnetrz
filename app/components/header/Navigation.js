@@ -1,30 +1,64 @@
+import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../../public/logo.png";
 
 function Navigation() {
   return (
     <nav className="flex items-center justify-between w-full h-full">
-      <span className="text-2xl text-white">Sadowski Studio</span>
+      <Image src={Logo} alt="logo" />
       <ul className="flex items-center gap-12.5 text-white">
         <li>
-          <Link href="#o-nas">O nas</Link>
+          <Link
+            href="#o-nas"
+            className="hover:text-[#F4E5BE] transition-all duration-300 font-medium"
+          >
+            O nas
+          </Link>
         </li>
         <li>
-          <Link href="#portfolio">Portfolio</Link>
+          <Link
+            href="#portfolio"
+            className="hover:text-[#F4E5BE]  transition-all duration-300 font-medium"
+          >
+            Portfolio
+          </Link>
         </li>
         <li>
-          <Link href="#media-o-nas">Media o Nas</Link>
+          <Link
+            href="#media-o-nas"
+            className="hover:text-[#F4E5BE]  transition-all duration-300 font-medium"
+          >
+            Media o Nas
+          </Link>
         </li>
         <li>
-          <Link href="#realizacje">Realizacje</Link>
+          <Link
+            href="#realizacje"
+            className="hover:text-[#F4E5BE]  transition-all duration-300 font-medium"
+          >
+            Realizacje
+          </Link>
         </li>
         <li>
-          <Link href="#uslugi">Usługi</Link>
+          <Link
+            href="#uslugi"
+            className="hover:text-[#F4E5BE]  transition-all duration-300 font-medium"
+          >
+            Usługi
+          </Link>
         </li>
         <li>
-          <Link href="#kontakt">Kontakt</Link>
+          <Link
+            href="#kontakt"
+            className="hover:text-[#F4E5BE]  transition-all duration-300 font-medium"
+          >
+            Kontakt
+          </Link>
         </li>
-        <li className="px-5 py-2 border border-[#F4E5BE]">
-          <Link href="#">Tulla sklep</Link>
+        <li className="px-7 py-2 border border-[#F4E5BE]">
+          <Link href="#" className="text-[#F4E5BE]">
+            Tulla sklep
+          </Link>
         </li>
       </ul>
     </nav>
