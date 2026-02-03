@@ -42,7 +42,7 @@ export default function Hero({ data }) {
   // ROZDZIELENIE OPISÓW
   const [firstdescription, secondDescrition] = data.description.split(".");
 
-  // ANIMACJA 3 SŁÓW
+  // ANIMACJA 3 SŁÓW.
   const [start, setStart] = useState(false);
   useEffect(() => {
     const handleStart = () => {
