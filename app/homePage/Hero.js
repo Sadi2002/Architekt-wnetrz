@@ -1,7 +1,7 @@
 "use client";
-import HeroBg from "../../public/hero-bg.jpg";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import HeroBg from "../../public/hero-bg.jpg";
 import HeroBackgroundImage from "../components/HeroBacgrkoundImage";
 
 const container = {
@@ -31,9 +31,19 @@ const item = {
   }),
 };
 
-export default function Hero() {
-  const [start, setStart] = useState(false);
+export default function Hero({ data }) {
+  // ROZDZIELENIE 3 SŁÓW
+  const title = data.title.toLowerCase().split(" ");
+  const getFirstLetterUppercase = title.map((word) => {
+    return word.slice(0, 1).toUpperCase() + word.slice(1);
+  });
+  const [first, second, third] = getFirstLetterUppercase;
 
+  // ROZDZIELENIE OPISÓW
+  const [firstdescription, secondDescrition] = data.description.split(".");
+
+  // ANIMACJA 3 SŁÓW
+  const [start, setStart] = useState(false);
   useEffect(() => {
     const handleStart = () => {
       setTimeout(() => {
@@ -49,7 +59,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-[100vh] w-full overflow-hidden px-5 md:px-10 lg:px-12.5 lg:relative">
+    <section className="h-[100dvh] w-full overflow-hidden px-5 md:px-10 lg:px-12.5 lg:relative">
       <div className="absolute inset-0 overflow-hidden">
         <HeroBackgroundImage src={HeroBg} alt="hero zdjecie" />
       </div>
@@ -60,14 +70,14 @@ export default function Hero() {
             variants={container}
             initial="hidden"
             animate={start ? "show" : "hidden"}
-            className="flex w-full justify-start items-start text-[#F4E5BE] font-cormorant font-regular text-[clamp(50px,15vw,80px)] gap-x-3 flex-wrap leading-[clamp(50px,15vw,80px)] max-w-[500px] lg:flex-col lg:max-w-[85%] lg:self-center  lg:gap-10 lg:uppercase xl:max-w-[90%]  xl:gap-15 xl:text-[clamp(100px,8vw,160px)] xl:leading-[clamp(100px,8vw,160px)] "
+            className="flex w-full justify-start items-start text-[#F4E5BE] font-cormorant font-regular text-[clamp(50px,15vw,80px)] gap-x-3 flex-wrap leading-[clamp(50px,15vw,80px)] max-w-[500px] lg:flex-col lg:max-w-[85%] lg:self-center lg:gap-10 lg:uppercase xl:max-w-[90%] xl:gap-15 xl:text-[clamp(100px,8vw,160px)] xl:leading-[clamp(100px,8vw,160px)]"
           >
             <motion.span
               custom={0}
               variants={item}
               className="tracking-[3px] lg:flex lg:justify-start lg:w-full xl:tracking-[5px] 2xl:tracking-[10px]"
             >
-              Tulla
+              {first}
             </motion.span>
             <motion.span
               custom={1}
@@ -75,26 +85,22 @@ export default function Hero() {
               className=" 
           tracking-[3px] lg:flex lg:justify-center lg:w-full xl:tracking-[5px] 2xl:tracking-[10px]"
             >
-              Home
+              {second}
             </motion.span>
             <motion.span
               custom={2}
               variants={item}
               className="tracking-[3px] lg:flex lg:justify-end lg:w-full xl:tracking-[5px] 2xl:tracking-[10px]"
             >
-              Interior
+              {third}
             </motion.span>
           </motion.div>
           <div className="flex flex-col gap-4 max-w-[600px] lg:gap-0 lg:absolute lg:bottom-[30px] 2xl:bottom-[50px]">
             <p className=" text-[#E9E9E9] text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)]">
-              Tullahome Interior to studio projektowania wnętrz, w którym
-              tworzymy dopracowane, funkcjonalne przestrzenie — od układu po
-              wykończenie.
+              {firstdescription}.
             </p>
             <p className=" text-[#E9E9E9] text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)]">
-              Opieramy się na ponadczasowej estetyce i dbałości o detale, aby
-              powstawały wnętrza idealnie dopasowane do Ciebie i Twojego stylu
-              życia.
+              {secondDescrition}.
             </p>
           </div>
         </div>
