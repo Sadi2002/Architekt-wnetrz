@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { urlFor } from "@/lib/sanity/client";
 
 export default function HeroBackgroundImage({ src, alt }) {
   const wrapperRef = useRef(null);
@@ -65,7 +66,7 @@ export default function HeroBackgroundImage({ src, alt }) {
   return (
     <div ref={wrapperRef} className="absolute inset-0 will-change-transform">
       <Image
-        src={src}
+        src={urlFor(src).url()}
         alt={alt}
         fill
         priority

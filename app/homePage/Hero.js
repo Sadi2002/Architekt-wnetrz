@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import HeroBg from "../../public/hero-bg.jpg";
 import HeroBackgroundImage from "../components/HeroBacgrkoundImage";
 
 const container = {
@@ -32,6 +31,7 @@ const item = {
 };
 
 export default function Hero({ data }) {
+  console.log(data);
   // ROZDZIELENIE 3 SŁÓW
   const title = data.title.toLowerCase().split(" ");
   const getFirstLetterUppercase = title.map((word) => {
@@ -61,7 +61,7 @@ export default function Hero({ data }) {
   return (
     <section className="h-[100dvh] w-full overflow-hidden px-5 md:px-10 lg:px-12.5 lg:relative">
       <div className="absolute inset-0 overflow-hidden">
-        <HeroBackgroundImage src={HeroBg} alt="hero zdjecie" />
+        <HeroBackgroundImage src={data.image.asset} alt={data.imageAlt} />
       </div>
 
       <div className="h-full flex w-full relative top-[40px] z-9 lg:static">
@@ -107,7 +107,7 @@ export default function Hero({ data }) {
       </div>
 
       <span className="absolute bottom-[30px] opacity-[64%] right-5 text-[#E9E9E9] text-[12px] md:right-10 lg:right-12.5 2xl:text-[14px]">
-        (przewiń w dół)
+        ({data.scrollDown})
       </span>
     </section>
   );
