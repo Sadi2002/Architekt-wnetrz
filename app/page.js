@@ -11,13 +11,14 @@ export default async function Home() {
 
   const navDesktop = navigationDesktopData;
   const hero = data.heroSection;
+  const about = data.aboutSection;
 
   return (
     <>
       <Intro />
       <Header data={navDesktop} />
       <Hero data={hero} />
-      <About />
+      <About data={about} />
     </>
   );
 }

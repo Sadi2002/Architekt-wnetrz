@@ -1,6 +1,6 @@
-import HeroImage from "../components/hero/HeroImage";
-import HeroTitle from "../components/hero/HeroTitle";
-import ScrollDown from "../components/hero/ScrollDown";
+import HeroImage from "../components/homePage/hero/HeroImage";
+import HeroTitle from "../components/homePage/hero/HeroTitle";
+import ScrollDown from "../components/homePage/hero/ScrollDown";
 
 export default function Hero({ data }) {
   return (
