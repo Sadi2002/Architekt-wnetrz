@@ -3,7 +3,7 @@ import About1 from "../../public/about1.png";
 
 export default function About() {
   return (
-    <section className="pt-12.5">
+    <section className="pt-20">
       <div>
         <div className="flex flex-col gap-4 px-5 mb-10">
           <p className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)]">
