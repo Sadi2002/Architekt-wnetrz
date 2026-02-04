@@ -6,8 +6,6 @@ import { urlFor } from "@/lib/sanity/client";
 
 export default function HeroBackgroundImage({ src, alt }) {
   const wrapperRef = useRef(null);
-  const scrollY = useRef(0);
-  const raf = useRef(null);
 
   const [zoomOut, setZoomOut] = useState(false);
 
@@ -32,35 +30,6 @@ export default function HeroBackgroundImage({ src, alt }) {
     if (!window.__PERF_READY__) return;
 
     if (!isDesktop) return;
-
-    const onScroll = () => {
-      scrollY.current = window.scrollY;
-    };
-
-    const animate = () => {
-      if (!wrapperRef.current) {
-        raf.current = requestAnimationFrame(animate);
-        return;
-      }
-
-      const vh = window.innerHeight;
-      const progress = Math.min(scrollY.current / vh, 1);
-      const maxTranslate = vh * 0.4;
-
-      wrapperRef.current.style.transform = `
-  translateY(${-progress * maxTranslate}px)
-`;
-
-      raf.current = requestAnimationFrame(animate);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    animate();
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(raf.current);
-    };
   }, [zoomOut]);
 
   return (

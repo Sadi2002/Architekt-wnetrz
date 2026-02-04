@@ -12,3 +12,20 @@ body,
 html {
   overflow-x: hidden;
 }
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE/Edge legacy */
+* {
+  -ms-overflow-style: none;
+}
+
+/* Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
