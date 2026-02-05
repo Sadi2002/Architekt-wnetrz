@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pl">
       <body
-        className={`antialiased ${cormorantGaramond.variable} bg-[#f4ece5]`}
+        className={`antialiased ${cormorantGaramond.variable} bg-[#D2C8BF]`}
       >
         {children}
       </body>

@@ -7,7 +7,7 @@ export default function ProjectSectionTitles({ data }) {
         ({data.heading})
       </h2>
       <div className="lg:flex lg:flex-col lg:gap-y-10 lg:w-1/2 lg:pl-2.5">
-        <p className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] mb-10 w-full lg:font-cormorant lg:text-[26px] lg:leading-[36px] lg:max-w-[560px] lg:font-semibold lg:mb-0">
+        <p className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] mb-10 w-full lg:font-cormorant lg:text-[26px] lg:leading-[36px] lg:max-w-[560px] lg:font-medium lg:mb-0">
           {data.description}
         </p>
         <div className="flex w-full justify-end pl-[12px] md:justify-start">

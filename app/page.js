@@ -7,6 +7,7 @@ import About from "./homePage/About";
 import Services from "./homePage/Services";
 import Projects from "./homePage/Projects";
 import BigTitles from "./homePage/BigTitles";
+import Partners from "./homePage/Partners";
 
 export default async function Home() {
   const data = await sanityClient.fetch(HomePage);
@@ -28,6 +29,7 @@ export default async function Home() {
       <Services data={services} />
       <Projects data={projects} />
       <BigTitles data={bigTitles} />
+      <Partners />
     </>
   );
 }
