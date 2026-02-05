@@ -13,8 +13,6 @@ import Faq from "./homePage/Faq";
 export default async function Home() {
   const data = await sanityClient.fetch(HomePage);
 
-  const navigationDesktopData = await sanityClient.fetch(NavigationDesktop);
-  const navDesktop = navigationDesktopData;
   const hero = data.heroSection;
   const about = data.aboutSection;
   const services = data.servicesSection;
@@ -26,7 +24,6 @@ export default async function Home() {
   return (
     <>
       <Intro />
-      <Header data={navDesktop} />
       <Hero data={hero} />
       <About data={about} />
       <Services data={services} />
