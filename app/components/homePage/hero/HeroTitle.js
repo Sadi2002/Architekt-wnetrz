@@ -55,7 +55,7 @@ export default function HeroTitle({ data }) {
     };
   }, []);
   return (
-    <div className="h-full flex w-full px-5 absolute bottom-[150px] z-9 md:px-10 lg:bottom-0 lg:px-12.5">
+    <div className="h-full flex w-full px-5 absolute bottom-[120px] z-9 md:px-10 lg:bottom-0 lg:px-12.5">
       <div className="h-full flex w-full flex-col justify-end gap-8 lg:justify-center lg:bottom-0 lg:static">
         <motion.div
           variants={container}
