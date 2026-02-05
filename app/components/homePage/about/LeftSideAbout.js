@@ -18,7 +18,7 @@ export default function LeftSideAbout({ data }) {
           <Link href={data.button.link}>{data.button.label}</Link>
         </button>
       </div>
-      <div className="relative aspect-6/4 w-full lg:w-[70%] 2xl:w-[60%] lg:aspect-5/3 2xl:aspect-7/4">
+      <div className="relative aspect-6/4 w-full lg:w-[70%] xl:w-[60%] lg:aspect-5/3 2xl:aspect-7/4">
         <Image
           src={urlFor(data.mainImage.asset).url()}
           alt={data.mainImageAlt}

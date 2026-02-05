@@ -9,7 +9,7 @@ function RightSideAbout({ data }) {
   return (
     <>
       {!isLessThan1024 && (
-        <div className="aspect-4/5 relative w-[30%] h-1/2 2xl:w-[30%] 2xl:aspect-6/7">
+        <div className="aspect-4/5 relative w-[30%] h-1/2 xl:w-[28%] 2xl:w-[30%] 2xl:aspect-6/7">
           <Image
             src={urlFor(data.sideImage.asset).url()}
             alt={data.sideImageAlt}
