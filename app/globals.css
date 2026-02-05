@@ -29,3 +29,21 @@ html {
   height: 0;
   display: none;
 }
+
+/* ANIMACJA PARTNEROW */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  will-change: transform;
+}

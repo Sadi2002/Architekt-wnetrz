@@ -8,6 +8,7 @@ import Services from "./homePage/Services";
 import Projects from "./homePage/Projects";
 import BigTitles from "./homePage/BigTitles";
 import Partners from "./homePage/Partners";
+import Faq from "./homePage/Faq";
 
 export default async function Home() {
   const data = await sanityClient.fetch(HomePage);
@@ -19,6 +20,8 @@ export default async function Home() {
   const services = data.servicesSection;
   const projects = data.projectsSection;
   const bigTitles = data.bigTitlesSection;
+  const partners = data.partnersSection;
+  const faq = data.faqSection;
 
   return (
     <>
@@ -29,7 +32,8 @@ export default async function Home() {
       <Services data={services} />
       <Projects data={projects} />
       <BigTitles data={bigTitles} />
-      <Partners />
+      <Partners data={partners} />
+      <Faq data={faq} />
     </>
   );
 }

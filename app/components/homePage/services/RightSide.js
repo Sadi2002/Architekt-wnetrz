@@ -12,7 +12,7 @@ export default function RightSide({ data }) {
           className="flex pt-5 flex-col gap-5 pb-7 border-b border-[rgba(0,0,0,0.25)] lg:flex-row lg:gap-x-[30px] lg:justify-between  2xl:pt-12"
         >
           <div className="flex">
-            <h3 className="text-[clamp(22px,6vw,30px)] leading-[clamp(22px,6vw,36px)] font-cormorant font-semibold lg:min-w-[200px] lg:px-2.5 lg:text-[36px] ">
+            <h3 className="text-[clamp(22px,6vw,30px)] leading-[clamp(22px,6vw,36px)] font-cormorant font-medium lg:min-w-[200px] lg:px-2.5 lg:text-[36px] ">
               {service.title}
             </h3>
           </div>
