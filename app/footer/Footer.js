@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-between text-white mt-20 pt-20 px-5 md:px-10 lg:px-12.5 lg:items-end lg:flex-row xl:pt-50 bg-[#181818] xl:mt-37.5 xl:pb-10 lg:gap-5">
+    <footer className="flex flex-col items-center justify-between pb-5 text-white mt-20 pt-20 px-5 md:px-10 lg:px-12.5 lg:items-end lg:flex-row xl:pt-50 bg-[#181818] xl:mt-37.5 xl:pb-10 lg:gap-5 overflow-hidden">
       <h2 className="order-5 text-[100px] leading-[75px] font-cormorant text-[#F4E5BE] uppercase lg:text-[150px] lg:leading-[100px] lg:order-[0]">
         Tulla
       </h2>
