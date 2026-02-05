@@ -22,11 +22,9 @@ export default function TitleAndQuestions({ data }) {
           <div
             key={index}
             className="flex flex-col gap-5 pt-6 pb-5 border-b border-[rgba(0,0,0,0.25)] cursor-pointer"
+            onClick={() => toggle(index)}
           >
-            <div
-              className="flex items-center gap-1 justify-between md:gap-5"
-              onClick={() => toggle(index)}
-            >
+            <div className="flex items-center gap-1 justify-between md:gap-5">
               <h3 className="text-[clamp(16px,5vw,26px)] leading-[clamp(26px,6vw,36px)]">
                 {item.question}
               </h3>
