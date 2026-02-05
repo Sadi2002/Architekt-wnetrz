@@ -14,7 +14,7 @@ export default function LeftSideAbout({ data }) {
         </p>
       </div>
       <div className="flex w-full justify-end px-5 md:px-10 lg:px-[62px] lg:justify-start">
-        <button className="mb-10 font-medium relative after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:bottom-[-2px] after:left-0  before:content-[''] before:absolute before:h-[7px] before:bg-[#D28E7F] before:w-[7px] before:top-[10px] before:left-[-12px] before:rounded-2xl cursor-pointer xl:mb-20">
+        <button className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] mb-10 font-medium relative after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:bottom-[-2px] after:left-0  before:content-[''] before:absolute before:h-[7px] before:bg-[#D28E7F] before:w-[7px] before:top-[10px] before:left-[-12px] before:rounded-2xl cursor-pointer xl:mb-20">
           <Link href={data.button.link}>{data.button.label}</Link>
         </button>
       </div>

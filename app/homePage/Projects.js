@@ -3,7 +3,7 @@ import ProjectSectionTitles from "../components/homePage/projects/ProjectSection
 
 export default function Projects({ data }) {
   return (
-    <section className="pt-20 pb-100 px-5 md:px-10 lg:px-12.5 xl:pt-37.5">
+    <section className="pt-20 px-5 md:px-10 lg:px-12.5 xl:pt-37.5">
       <ProjectSectionTitles data={data} />
       <Project data={data} />
     </section>
