@@ -55,13 +55,13 @@ export default function HeroTitle({ data }) {
     };
   }, []);
   return (
-    <div className="h-screen flex w-full relative z-9 lg:static">
-      <div className="h-full flex w-full flex-col relative justify-end bottom-[150px] gap-8 lg:justify-center lg:bottom-0 lg:static">
+    <div className="h-full flex w-full px-5 absolute bottom-[150px] z-9 md:px-10 lg:bottom-0 lg:px-12.5">
+      <div className="h-full flex w-full flex-col justify-end gap-8 lg:justify-center lg:bottom-0 lg:static">
         <motion.div
           variants={container}
           initial="hidden"
           animate={start ? "show" : "hidden"}
-          className="flex w-full justify-start items-start text-[#F4E5BE] font-cormorant font-regular text-[clamp(50px,15vw,80px)] gap-x-3 flex-wrap leading-[clamp(50px,15vw,80px)] max-w-[500px] lg:flex-col lg:max-w-[85%] lg:self-center lg:gap-10 lg:uppercase xl:max-w-[90%] xl:gap-15 xl:text-[clamp(100px,8vw,160px)] xl:leading-[clamp(100px,8vw,160px)]"
+          className="flex w-full justify-start items-start lg:absolute lg:top-1/2 lg:translate-y-[-50%] text-[#F4E5BE] font-cormorant font-regular text-[clamp(50px,15vw,80px)] gap-x-3 flex-wrap leading-[clamp(50px,15vw,80px)] max-w-[500px] lg:flex-col lg:max-w-[85%] lg:self-center lg:gap-10 lg:uppercase xl:max-w-[90%] xl:gap-15 xl:text-[clamp(100px,8vw,160px)] xl:leading-[clamp(100px,8vw,160px)]"
         >
           <motion.span
             custom={0}

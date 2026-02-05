@@ -33,7 +33,7 @@ export default function HeroBackgroundImage({ src, alt }) {
   }, [zoomOut]);
 
   return (
-    <div ref={wrapperRef} className="absolute inset-0 will-change-transform">
+    <div ref={wrapperRef} className="h-full will-change-transform">
       <Image
         src={urlFor(src).url()}
         alt={alt}

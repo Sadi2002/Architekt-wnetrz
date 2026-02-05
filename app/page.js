@@ -4,6 +4,7 @@ import Intro from "./components/intro/Intro";
 import { sanityClient } from "@/lib/sanity/client";
 import { HomePage, NavigationDesktop } from "@/lib/sanity/queries";
 import About from "./homePage/About";
+import Services from "./homePage/Services";
 
 export default async function Home() {
   const data = await sanityClient.fetch(HomePage);
@@ -19,6 +20,7 @@ export default async function Home() {
       <Header data={navDesktop} />
       <Hero data={hero} />
       <About data={about} />
+      <Services />
     </>
   );
 }
