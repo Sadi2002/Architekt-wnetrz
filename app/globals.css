@@ -112,3 +112,9 @@ body .foto-btn::after {
 body.is-dark .foto-btn::after {
   background-color: #f4e5be;
 }
+
+body.is-dark .faq-heading,
+body.is-dark .faq-title,
+body.is-dark .faq-description {
+  color: #fff;
+}
