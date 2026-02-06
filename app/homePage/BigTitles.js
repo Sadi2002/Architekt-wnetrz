@@ -5,7 +5,7 @@ export default function BigTitles({ data }) {
   const sectionRef = useRef(null);
   const lineOneRef = useRef(null);
   const lineTwoRef = useRef(null);
-  const maxMoveRef = useRef(100); // default mobile
+  const maxMoveRef = useRef(100);
 
   useEffect(() => {
     const updateMove = () => {
