@@ -86,3 +86,29 @@ body .media-active .media-btn::after {
 body.is-dark .media-active .media-btn::after {
   background-color: #f4e5be;
 }
+
+/* FOTO */
+
+body .foto-text {
+  color: #000;
+}
+
+body.is-dark .foto-text {
+  color: #fff;
+}
+
+body .foto-btn a {
+  color: #000;
+}
+
+body.is-dark .foto-btn a {
+  color: #f4e5be;
+}
+
+body .foto-btn::after {
+  background-color: #000;
+}
+
+body.is-dark .foto-btn::after {
+  background-color: #f4e5be;
+}

@@ -10,6 +10,7 @@ import Partners from "./homePage/Partners";
 import Faq from "./homePage/Faq";
 import Media from "./homePage/Media";
 import BodyAndTitleObserver from "./components/BodyBgObserver";
+import Foto from "./homePage/Foto";
 
 export default async function Home() {
   const data = await sanityClient.fetch(HomePage);
@@ -30,10 +31,14 @@ export default async function Home() {
       <Services data={services} />
       <Projects data={projects} />
       <BodyAndTitleObserver targetId="big-titles" />
-      <BigTitles data={bigTitles} />
-      <Media />
-      {/* <Faq data={faq} />
-      <Partners data={partners} /> */}
+      <section id="big-titles">
+        <BigTitles data={bigTitles} />
+        <Media />
+      </section>
+
+      <Foto />
+      <Faq data={faq} />
+      <Partners data={partners} />
     </>
   );
 }

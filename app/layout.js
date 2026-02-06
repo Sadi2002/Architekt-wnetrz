@@ -37,7 +37,7 @@ export default async function RootLayout({ children }) {
       <body className={`${cormorantGaramond.variable} `}>
         <Header data={navDesktop} />
         {children}
-        {/* <Footer data={footer} /> */}
+        <Footer data={footer} />
       </body>
     </html>
   );

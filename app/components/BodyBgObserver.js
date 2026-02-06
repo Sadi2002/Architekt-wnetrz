@@ -8,20 +8,26 @@ export default function BodyAndTitleObserver({ targetId }) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const isAtTop = entry.boundingClientRect.top <= 0;
+        // aktywne tylko, gdy "linia" na górze ekranu przecina target
+        const isActive = entry.isIntersecting;
 
-        document.body.classList.toggle("is-dark", isAtTop);
-        target.classList.toggle("is-gold", isAtTop);
+        document.body.classList.toggle("is-dark", isActive);
+        target.classList.toggle("is-gold", isActive);
       },
       {
-        rootMargin: "0px 0px -100% 0px",
+        rootMargin: "100px 0px -100% 0px",
         threshold: 0,
       }
     );
 
     observer.observe(target);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      // opcjonalnie: posprzątaj klasy przy unmount
+      document.body.classList.remove("is-dark");
+      target.classList.remove("is-gold");
+    };
   }, [targetId]);
 
   return null;

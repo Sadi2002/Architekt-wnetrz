@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Media() {
   return (
-    <section className="pt-20 pb-100 px-5 md:px-10 lg:px-12.5 xl:pt-37.5 flex items-center flex-col relative gap-5 lg:gap-10">
+    <section className="pt-20 px-5 md:px-10 lg:px-12.5 xl:pt-37.5 flex items-center flex-col relative gap-5 lg:gap-10">
       <div className="relative aspect-4/6 w-[65%] lg:w-[30%]">
         <Image src={ona} fill alt="test" className="object-cover" />
         <div className="bg-[rgba(0,0,0,0.37)] absolute top-0 left-0 z-99 w-full h-full"></div>
