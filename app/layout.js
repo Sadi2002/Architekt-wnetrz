@@ -8,8 +8,9 @@ import { sanityClient } from "@/lib/sanity/client";
 
 export const cormorantGaramond = CormorantGaramond({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500"],
   variable: "--font-cormorant",
+  display: "swap",
 });
 
 // export const metadata = {
@@ -18,13 +19,15 @@ export const cormorantGaramond = CormorantGaramond({
 // };
 
 export default async function RootLayout({ children }) {
-  const navigationDesktopData = await sanityClient.fetch(NavigationDesktop);
+  const navigationDesktopData = await sanityClient.fetch(
+    NavigationDesktop,
+    {},
+    { next: { revalidate: 3600 } }
+  );
   const navDesktop = navigationDesktopData;
   return (
     <html lang="pl">
-      <body
-        className={`antialiased ${cormorantGaramond.variable} bg-[#D2C8BF]`}
-      >
+      <body className={`${cormorantGaramond.variable} bg-[#D2C8BF]`}>
         <Header data={navDesktop} />
         {children}
         <Footer />
