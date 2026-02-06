@@ -1,8 +1,7 @@
-import Header from "./header/Header";
 import Hero from "./homePage/Hero";
 import Intro from "./components/intro/Intro";
 import { sanityClient } from "@/lib/sanity/client";
-import { HomePage, NavigationDesktop } from "@/lib/sanity/queries";
+import { HomePage } from "@/lib/sanity/queries";
 import About from "./homePage/About";
 import Services from "./homePage/Services";
 import Projects from "./homePage/Projects";
@@ -23,7 +22,7 @@ export default async function Home() {
 
   return (
     <>
-      <Intro />
+      {/* <Intro /> */}
       <Hero data={hero} />
       <About data={about} />
       <Services data={services} />
