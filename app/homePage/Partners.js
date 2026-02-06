@@ -4,7 +4,7 @@ import { urlFor } from "@/lib/sanity/client";
 export default function Partners({ data }) {
   return (
     <section className="pt-20 xl:pt-37.5 overflow-hidden">
-      <div className="marquee">
+      <div className="marquee py-2.5">
         {[...data.logos, ...data.logos].map((logo, i) => (
           <div key={i} className="pr-10 lg:pr-20 shrink-0">
             <Image

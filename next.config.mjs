@@ -13,9 +13,9 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
-  compiler: {
-    removeConsole: true,
-  },
+  // compiler: {
+  //   removeConsole: true,
+  // },
 };
 
 export default nextConfig;

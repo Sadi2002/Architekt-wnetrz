@@ -8,6 +8,8 @@ import Projects from "./homePage/Projects";
 import BigTitles from "./homePage/BigTitles";
 import Partners from "./homePage/Partners";
 import Faq from "./homePage/Faq";
+import Media from "./homePage/Media";
+import BodyAndTitleObserver from "./components/BodyBgObserver";
 
 export default async function Home() {
   const data = await sanityClient.fetch(HomePage);
@@ -22,14 +24,16 @@ export default async function Home() {
 
   return (
     <>
-      {/* <Intro /> */}
+      <Intro />
       <Hero data={hero} />
       <About data={about} />
       <Services data={services} />
       <Projects data={projects} />
+      <BodyAndTitleObserver targetId="big-titles" />
       <BigTitles data={bigTitles} />
-      <Partners data={partners} />
-      <Faq data={faq} />
+      <Media />
+      {/* <Faq data={faq} />
+      <Partners data={partners} /> */}
     </>
   );
 }

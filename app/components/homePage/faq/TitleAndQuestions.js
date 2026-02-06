@@ -13,7 +13,7 @@ export default function TitleAndQuestions({ data }) {
 
   return (
     <>
-      <h2 className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] font-medium mb-5 uppercase lg:w-1/2">
+      <h2 className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] mb-5 uppercase lg:w-1/2">
         ({data.heading})
       </h2>
 
@@ -25,7 +25,7 @@ export default function TitleAndQuestions({ data }) {
             onClick={() => toggle(index)}
           >
             <div className="flex items-center gap-1 justify-between md:gap-5">
-              <h3 className="text-[clamp(16px,5vw,26px)] leading-[clamp(26px,6vw,36px)]">
+              <h3 className="text-[clamp(14px,4.5vw,20px)] leading-[clamp(24px,6vw,28px)] lg:text-[clamp(16px,5vw,26px)] lg:leading-[clamp(26px,6vw,36px)] pl-2.5">
                 {item.question}
               </h3>
 
@@ -41,7 +41,7 @@ export default function TitleAndQuestions({ data }) {
             </div>
 
             {openIndex === index && (
-              <p className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] pr-5 md:pr-10 lg:pr-12.5">
+              <p className="text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] pr-5 md:pr-10 lg:pr-12.5 pl-2.5 text-white">
                 {item.answer}
               </p>
             )}

@@ -47,3 +47,42 @@ html {
   animation: marquee 20s linear infinite;
   will-change: transform;
 }
+
+body {
+  background-color: #d2c8bf;
+  transition: background-color 0.4s ease;
+}
+
+body.is-dark {
+  background-color: #181818;
+}
+
+/* MEDIA – po wejściu w BigTitles */
+body.is-dark .media-text {
+  color: #000;
+}
+
+body.is-dark .media-btn {
+  color: #000;
+}
+
+body.is-dark .media-btn::after {
+  background-color: #000;
+}
+
+/* MEDIA – stan aktywny (hover / focus) */
+body.is-dark .media-active .media-text {
+  color: #fff;
+}
+
+body.is-dark .media-active .media-btn {
+  color: #f4e5be;
+}
+
+body .media-active .media-btn::after {
+  background-color: #000;
+}
+
+body.is-dark .media-active .media-btn::after {
+  background-color: #f4e5be;
+}
