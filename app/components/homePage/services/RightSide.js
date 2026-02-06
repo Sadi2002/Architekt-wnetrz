@@ -1,9 +1,6 @@
-"use client";
-import { useIsLessThan1024 } from "@/app/hook/useIsMobile";
 import Link from "next/link";
 
 export default function RightSide({ data }) {
-  const isLessThan1024 = useIsLessThan1024();
   return (
     <div className="border-t border-[rgba(0,0,0,0.25)] lg:w-[100%] xl:w-[1000px] 2xl:mt-[24px]">
       {data.services.map((service, index) => (
@@ -21,13 +18,12 @@ export default function RightSide({ data }) {
               {service.description}
             </p>
           </div>
-          {isLessThan1024 && (
-            <div className="flex w-full justify-start px-[12px] lg:px-[62px] lg:justify-start">
-              <button className="font-medium relative text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:bottom-[-2px] after:left-0  before:content-[''] before:absolute before:h-[7px] before:bg-[#D28E7F] before:w-[7px] before:top-[10px] before:left-[-12px] before:rounded-2xl cursor-pointer xl:mb-20">
-                <Link href={service.button.link}>{service.button.label}</Link>
-              </button>
-            </div>
-          )}
+
+          <div className="flex w-full justify-start px-[12px] lg:px-[62px] lg:justify-start lg:hidden">
+            <button className="font-medium relative text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] after:content-[''] after:absolute after:h-[1px] after:bg-black after:w-full after:bottom-[-2px] after:left-0  before:content-[''] before:absolute before:h-[7px] before:bg-[#D28E7F] before:w-[7px] before:top-[10px] before:left-[-12px] before:rounded-2xl cursor-pointer xl:mb-20">
+              <Link href={service.button.link}>{service.button.label}</Link>
+            </button>
+          </div>
         </div>
       ))}
     </div>

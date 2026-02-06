@@ -1,10 +1,5 @@
-"use client";
 import Link from "next/link";
-import { useIsLessThan1024 } from "../../hook/useIsMobile";
-
 export default function DesktopNavigation({ data }) {
-  const isLessThan1024 = useIsLessThan1024();
-
   return (
     <>
       <ul className="items-center gap-8 text-white xl:gap-10 hidden lg:flex">
