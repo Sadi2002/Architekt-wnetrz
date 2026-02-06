@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
   );
   const navDesktop = navigationDesktopData;
   return (
-    <html lang="pl">
+    <html lang="pl" className="bg-[#D2C8BF]">
       <body className={`${cormorantGaramond.variable} bg-[#D2C8BF]`}>
         <Header data={navDesktop} />
         {children}
