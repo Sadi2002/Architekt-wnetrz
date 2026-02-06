@@ -115,6 +115,7 @@ body.is-dark .foto-btn::after {
 
 body.is-dark .faq-heading,
 body.is-dark .faq-title,
-body.is-dark .faq-description {
+body.is-dark .faq-description,
+body.is-dark .foto-title {
   color: #fff;
 }

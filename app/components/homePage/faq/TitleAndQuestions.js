@@ -41,7 +41,7 @@ export default function TitleAndQuestions({ data }) {
             </div>
 
             {openIndex === index && (
-              <p className="faq-description text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] pr-5 md:pr-10 lg:pr-12.5 pl-2.5 text-white">
+              <p className="faq-description text-[clamp(14px,4vw,16px)] leading-[clamp(22px,4vw,24px)] pr-5 md:pr-10 lg:pr-12.5 pl-2.5 text-black">
                 {item.answer}
               </p>
             )}

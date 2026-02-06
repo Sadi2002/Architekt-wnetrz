@@ -22,6 +22,8 @@ export default async function Home() {
   const bigTitles = data.bigTitlesSection;
   const partners = data.partnersSection;
   const faq = data.faqSection;
+  const foto = data.photoGalleryIntroSection;
+  const media = data.mediaQuoteSection;
 
   return (
     <>
@@ -33,10 +35,9 @@ export default async function Home() {
       <BodyAndTitleObserver targetId="big-titles" />
       <section id="big-titles">
         <BigTitles data={bigTitles} />
-        <Media />
+        <Media data={media} />
       </section>
-
-      <Foto />
+      <Foto data={foto} />
       <Faq data={faq} />
       <Partners data={partners} />
     </>
