@@ -7,9 +7,8 @@ import Services from "./homePage/Services";
 import Projects from "./homePage/Projects";
 import BigTitles from "./homePage/BigTitles";
 import Partners from "./homePage/Partners";
-import Faq from "./homePage/Faq";
+
 import Media from "./homePage/Media";
-import BodyAndTitleObserver from "./components/BodyBgObserver";
 import Foto from "./homePage/Foto";
 
 export default async function Home() {
@@ -21,7 +20,7 @@ export default async function Home() {
   const projects = data.projectsSection;
   const bigTitles = data.bigTitlesSection;
   const partners = data.partnersSection;
-  const faq = data.faqSection;
+
   const foto = data.photoGalleryIntroSection;
   const media = data.mediaQuoteSection;
 
@@ -32,13 +31,9 @@ export default async function Home() {
       <About data={about} />
       <Services data={services} />
       <Projects data={projects} />
-      <BodyAndTitleObserver targetId="big-titles" />
-      <section id="big-titles">
-        <BigTitles data={bigTitles} />
-        <Media data={media} />
-      </section>
+      <BigTitles data={bigTitles} />
+      <Media data={media} />
       <Foto data={foto} />
-      <Faq data={faq} />
       <Partners data={partners} />
     </>
   );

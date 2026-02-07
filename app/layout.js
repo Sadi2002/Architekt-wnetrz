@@ -1,12 +1,12 @@
 import "./globals.css";
 
-import { Cormorant_Garamond as CormorantGaramond } from "next/font/google";
+import { Karla } from "next/font/google";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import { FooterData, NavigationDesktop } from "@/lib/sanity/queries";
 import { sanityClient } from "@/lib/sanity/client";
 
-export const cormorantGaramond = CormorantGaramond({
+export const cormorantGaramond = Karla({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-cormorant",

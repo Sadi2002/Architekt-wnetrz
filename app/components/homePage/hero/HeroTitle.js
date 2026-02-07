@@ -34,7 +34,7 @@ export default function HeroTitle({ data }) {
   const getFirstLetterUppercase = title.map((word) => {
     return word.slice(0, 1).toUpperCase() + word.slice(1);
   });
-  const [first, second, third] = getFirstLetterUppercase;
+  const [first, second] = getFirstLetterUppercase;
 
   // ROZDZIELENIE OPISÓW
   const [firstdescription, secondDescrition] = data.description.split(".");
@@ -61,12 +61,12 @@ export default function HeroTitle({ data }) {
           variants={container}
           initial="hidden"
           animate={start ? "show" : "hidden"}
-          className="flex w-full justify-start items-start lg:absolute lg:top-1/2 lg:translate-y-[-50%] text-[#F4E5BE] font-cormorant font-regular text-[clamp(50px,15vw,80px)] gap-x-3 flex-wrap leading-[clamp(50px,15vw,80px)] max-w-[500px] lg:flex-col lg:max-w-[85%] lg:self-center lg:gap-10 lg:uppercase xl:max-w-[90%] xl:gap-15 xl:text-[clamp(100px,8vw,160px)] xl:leading-[clamp(100px,8vw,160px)]"
+          className="flex w-full justify-start items-start lg:absolute lg:justify-center lg:top-1/2 lg:translate-y-[-50%] text-white font-cormorant font-regular text-[clamp(50px,15vw,80px)] gap-x-3 flex-wrap leading-[clamp(50px,15vw,80px)] max-w-[500px] lg:max-w-[85%] lg:self-center lg:gap-5 lg:uppercase xl:max-w-[90%] xl:gap-15 xl:text-[clamp(100px,8vw,160px)] xl:leading-[clamp(100px,8vw,160px)]"
         >
           <motion.span
             custom={0}
             variants={item}
-            className="tracking-[3px] lg:flex lg:justify-start lg:w-full xl:tracking-[5px] 2xl:tracking-[10px]"
+            className="tracking-[3px] lg:flex lg:justify-start  xl:tracking-[5px] 2xl:tracking-[10px]"
           >
             {first}
           </motion.span>
@@ -74,16 +74,9 @@ export default function HeroTitle({ data }) {
             custom={1}
             variants={item}
             className=" 
-          tracking-[3px] lg:flex lg:justify-center lg:w-full xl:tracking-[5px] 2xl:tracking-[10px]"
+          tracking-[3px] lg:flex lg:justify-center  xl:tracking-[5px] 2xl:tracking-[10px]"
           >
             {second}
-          </motion.span>
-          <motion.span
-            custom={2}
-            variants={item}
-            className="tracking-[3px] lg:flex lg:justify-end lg:w-full xl:tracking-[5px] 2xl:tracking-[10px]"
-          >
-            {third}
           </motion.span>
         </motion.div>
         <div className="flex flex-col gap-4 max-w-[600px] lg:gap-0 lg:absolute lg:bottom-[30px] 2xl:bottom-[50px]">
